@@ -1,0 +1,55 @@
+.home-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  color: #2f2f2f;
+  font-family: 'Segoe UI', sans-serif;
+  padding-top: 5rem;
+  box-sizing: border-box;
+
+}
+
+body, html {
+  overflow: auto;
+  height: 100%
+}
+
+.profile-container {
+  background-color: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+.profile-container h1 {
+  font-size: 2.4rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+
+.profile-container h2 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+
+.profile-container p {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.profile-container a {
+  font-size: 1.3rem;
+  color: #1e4457;
+  text-decoration: none;
+}
+
+.profile-container a:hover {
+  text-decoration: underline;
+}

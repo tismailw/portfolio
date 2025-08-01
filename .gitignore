@@ -1,0 +1,44 @@
+# === Python / Django ===
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+*.pot
+*.pyc
+db.sqlite3
+env/
+.venv/
+ENV/
+venv/
+.env
+.env.*
+
+# Django specific
+media/
+staticfiles/
+local_settings.py
+secrets.json
+
+# VSCode / system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# === Node / React (frontend) ===
+node_modules/
+build/
+dist/
+*.env.local
+*.env.development
+*.env.production
+*.env.test
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# React config
+portfolio-frontend/.next/
+portfolio-frontend/.turbo/
+portfolio-frontend/.eslintcache
