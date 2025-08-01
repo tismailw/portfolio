@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: portfolio
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py migrate
+    startCommand: gunicorn portfolio_site.wsgi
+    envVars:
+      - key: SECRET_KEY
+        fromDotEnv: true
+      - key: DEBUG
+        fromDotEnv: true
+      - key: ALLOWED_HOSTS
+        fromDotEnv: true
