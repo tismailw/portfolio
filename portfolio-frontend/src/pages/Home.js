@@ -3,15 +3,18 @@ import axios from "axios";
 import './Home.css';
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 
-
 function Home() {
   const [profile, setProfile] = useState(null);
 
   useEffect(() => {
-  axios.get("https://portfolio-9xvl.onrender.com/api/profile/")
-      .then(res => setProfile(res.data))
-      .catch(err => console.error(err));
+    axios.get("https://portfolio-9xvl.onrender.com/api/profile/")
+      .then(res => {
+        console.log("API Response:", res.data); // 👈 Console log added
+        setProfile(res.data);
+      })
+      .catch(err => console.error("API Error:", err));
   }, []);
+
   useEffect(() => {
     document.body.style.overflowY = "hidden";  // Disable scroll on home
     return () => document.body.style.overflowY = "auto"; // Re-enable scroll when navigating away
@@ -22,7 +25,7 @@ function Home() {
       {profile ? (
         <div className="profile-container">
           <h1>{profile.name}</h1>
-          <h2> {profile.bio}</h2>
+          <h2>{profile.bio}</h2>
           <p>Location: {profile.location}</p>
 
           <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "1rem", gap: "1rem" }}>
@@ -35,9 +38,7 @@ function Home() {
             <a href="https://www.youtube.com/@dozeydev" target="_blank" rel="noopener noreferrer">
               <FaYoutube size={40} style={{ color: "#FF0000" }} />
             </a>
-
           </div>
-          
         </div>
       ) : (
         <p>Loading profile...</p>
