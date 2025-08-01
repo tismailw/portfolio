@@ -133,7 +133,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [  
-    "http://localhost:3000"  
+    "http://localhost:3000",
+    'https://www.tismailw.com',
+    'https://portfolio-ochre-tau-72.vercel.app/',
+    
+    
 ]  
 
 MEDIA_URL = '/media/'
