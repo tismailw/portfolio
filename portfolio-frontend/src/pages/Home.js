@@ -8,7 +8,7 @@ function Home() {
   const [profile, setProfile] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/api/profile/")
+  axios.get("https://portfolio-9xvl.onrender.com/api/profile/")
       .then(res => setProfile(res.data))
       .catch(err => console.error(err));
   }, []);
